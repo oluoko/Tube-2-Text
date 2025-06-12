@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tube 2 Text</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="flex flex-col min-h-screen bg-gray-100 font-sans">
+    <nav class="bg-black p-4 text-white flex items-center justify-between">
+      <h1 class="text-3xl font-black">
+        Tube <span class="text-red-700">2</span> Text
+      </h1>
+      <div class="">
+        <a
+          href="#"
+          class="bg-white text-black hover:underline border rounded-lg p-1.5"
+          >Logout</a
+        >
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="flex-grow container mx-auto mt-10 px-4 sm:px-0">
+      <div
+        class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 flex flex-col"
+      >
+        <!-- intro section -->
+        <div class="text-center">
+          <h2 class="text-2xl font-bold mb-4">
+            Welcome to Tube <span class="text-red-700">2</span> Text
+          </h2>
+          <p class="text-gray-600 mt-2">
+            Generate high-quality blog articles from YouTube videos using AI.
+            Enter the URL of a YouTube video to get started.
+          </p>
+        </div>
+
+        <br />
+
+        <!-- Youtube link input section -->
+        <div>
+          <h2 class="text-xl mb-4 font-semibold">Enter the YouTube Link</h2>
+          <div class="flex">
+            <input
+              type="url"
+              id="youtubeLink"
+              class="flex-grow p-2 border border-gray-300 rounded-l-lg"
+              placeholder="https://www.youtube.com/watch?v=example"
+            />
+            <button
+              id="generateBlogButton"
+              class="bg-red-700 text-white px-4 py-2 rounded-r-lg hover:bg-red-900 transition-colors"
+            >
+              Generate
+            </button>
+          </div>
+        </div>
+
+        <!-- Generated Blog Display section -->
+        <section class="mt-12 flex-grow">
+          <h2 class="text-xl mb-4 font-bold">Generated Blog Article</h2>
+          <div id="blogContent" class="mt-2 text-gray-700 space-y-4"></div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
