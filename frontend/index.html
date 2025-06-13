@@ -8,17 +8,33 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
   </head>
-  <body class="flex flex-col min-h-screen bg-gray-100 font-sans">
+  <body class="flex flex-col min-h-screen bg-gray-100 font-sans antialiased">
     <nav class="bg-black p-4 text-white flex items-center justify-between">
-      <h1 class="text-3xl font-black">
+      <h1 class="text-xl md:text-3xl font-black">
         Tube <span class="text-red-700">2</span> Text
       </h1>
-      <div class="">
+
+      <div class="gap-x-2 md:gap-x-4 flex items-center">
         <a
-          href="#"
-          class="bg-white text-black hover:underline border rounded-lg p-1.5"
-          >Logout</a
+          href="generated-blogs.html"
+          class="text-white hover:text-red-700 transition-colors"
+          ><i class="fa-brands fa-blogger mr-1"></i> All Blogs
+        </a>
+        <a
+          href="login.html"
+          class="bg-transparent text-white hover:bg-white hover:text-black border border-white rounded-lg p-1.5 transition-colors"
+          >Login</a
+        >
+        <a
+          href="register.html"
+          class="bg-white text-black border hover:bg-transparent hover:text-white hover:border-white rounded-lg p-1.5 transition-colors"
+          >Register</a
         >
       </div>
     </nav>
@@ -60,6 +76,9 @@
           </div>
         </div>
 
+        <!-- Section for loading circle -->
+        <div style="display: none" id="loadingCircle" class="load"></div>
+
         <!-- Generated Blog Display section -->
         <section class="mt-12 flex-grow">
           <h2 class="text-xl mb-4 font-bold">Generated Blog Article</h2>
@@ -67,5 +86,27 @@
         </section>
       </div>
     </main>
+
+    <!-- Footer -->
+    <footer class="text-center p-4 text-black mt-6">
+      <p class="text-sm">
+        &copy; 2025 Tube <span class="text-red-700">2</span> Text. All rights
+        reserved.
+      </p>
+      <p class="text-lg text-gray-500 my-3">
+        Developed by
+        <a
+          href="https://github.com/oluoko"
+          target="_blank"
+          rel="noopener"
+          class="hover:text-gray-900 hover:bg-gray-300 py-1 px-2 rounded-md transition-colors"
+        >
+          <i class="fa-brands fa-github mr-1"></i>Oluoko
+        </a>
+      </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
   </body>
 </html>
